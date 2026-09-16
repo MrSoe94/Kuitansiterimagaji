@@ -40,12 +40,18 @@
   .del{border:0;background:#fee2e2;color:#b91c1c;width:22px;height:22px;border-radius:6px;cursor:pointer;font-size:12px;line-height:1}
   .del:hover{background:#fecaca}
   .hint{font-size:12px;color:var(--muted);text-align:center;padding:4px 10px 20px}
+  /* pengaturan font */
+  .size-row{display:flex;align-items:center;gap:10px;margin-top:4px}
+  .size-row input[type=range]{flex:1;accent-color:var(--accent)}
+  .size-val{font-size:12px;color:var(--muted);min-width:56px;text-align:right;font-weight:700}
+  .font-preview{margin-top:12px;border:1.5px dashed #d1d5db;border-radius:8px;padding:9px 12px;
+                background:#fafafa;line-height:1.5;color:#111;font-weight:bold}
   input[type=file]{font-size:12px;width:100%}
   /* ---------- PREVIEW / SHEET ---------- */
   .preview-area{flex:1;max-height:calc(100vh - 52px);overflow:auto;padding:22px;display:flex;flex-direction:column;align-items:center;gap:10px}
   .prev-label{font-size:12px;color:var(--muted);font-weight:600}
   .sheet{background:#fff;width:210mm;min-height:297mm;padding:13mm 14mm;box-shadow:0 4px 24px rgba(0,0,0,.16);
-         font-family:'Times New Roman',Times,serif;font-size:12.5px;color:#000;flex-shrink:0}
+         font-family:var(--doc-font,'Times New Roman',Times,serif);font-size:var(--doc-size,12.5px);color:#000;flex-shrink:0}
   @media (max-width:1100px){
     .layout{flex-direction:column}
     .panel{width:100%;max-height:none}
@@ -57,16 +63,16 @@
   .kop-logo-empty{width:88px;height:96px;border:1.5px dashed #bbb;display:flex;align-items:center;justify-content:center;
                   font-size:10px;color:#999;text-align:center;flex-shrink:0;font-family:Arial}
   .kop-text{flex:1;text-align:center;line-height:1.35}
-  .kop-text .l1{font-size:13.5px}
-  .kop-text .l2{font-size:13.5px}
-  .kop-text .l3{font-size:16px;font-weight:bold}
-  .kop-text .l4{font-size:11px}
-  .kop-text .l5{font-size:11px}
+  .kop-text .l1{font-size:calc(var(--doc-size,12.5px)*1.08)}
+  .kop-text .l2{font-size:calc(var(--doc-size,12.5px)*1.08)}
+  .kop-text .l3{font-size:calc(var(--doc-size,12.5px)*1.28);font-weight:bold}
+  .kop-text .l4{font-size:calc(var(--doc-size,12.5px)*0.88)}
+  .kop-text .l5{font-size:calc(var(--doc-size,12.5px)*0.88)}
   .divider{border-bottom:3px solid #000;border-top:1px solid #000;height:2px;margin-top:6px}
-  .doc-title{text-align:center;font-weight:bold;line-height:1.55;margin-top:16px;font-size:13.5px}
+  .doc-title{text-align:center;font-weight:bold;line-height:1.55;margin-top:16px;font-size:calc(var(--doc-size,12.5px)*1.08)}
   .bulan-line{text-align:right;font-weight:bold;margin:8px 0 6px}
   table.tbl{width:100%;border-collapse:collapse}
-  .tbl th,.tbl td{border:1.5px solid #000;padding:4px 6px;font-size:12.5px}
+  .tbl th,.tbl td{border:1.5px solid #000;padding:4px 6px;font-size:var(--doc-size,12.5px)}
   .tbl th{text-align:center;font-weight:bold;line-height:1.25}
   .tbl td{vertical-align:top}
   .ctr{text-align:center}
@@ -85,7 +91,7 @@
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14'%3E%3Cg fill='none' stroke='%23000' stroke-width='0.9'%3E%3Crect x='1' y='1' width='12' height='12'/%3E%3Cpath d='M1 1l12 12M13 1L1 13'/%3E%3Cpath d='M21 1l6 6-6 6-6-6z'/%3E%3C/g%3E%3Ccircle cx='21' cy='7' r='0.9' fill='%23000'/%3E%3C/svg%3E");
     background-size:28px 14px;background-repeat:repeat}
   .k-outer{background:#fff;border:1.4px solid #000;padding:6px 7px 7px}
-  .k-title-box{border:1.4px solid #000;text-align:center;font-weight:bold;font-size:20px;
+  .k-title-box{border:1.4px solid #000;text-align:center;font-weight:bold;font-size:calc(var(--doc-size,12.5px)*1.6);
                letter-spacing:10px;padding:8px 6px 8px 16px;margin-bottom:6px}
   .k-body-box{border:1.4px solid #000;display:flex;padding:5px}
   .k-col{width:50px;flex-shrink:0;border:1.4px solid #000;padding:4px;display:flex;align-items:stretch}
@@ -95,7 +101,7 @@
                      radial-gradient(circle,rgba(0,0,0,.18) .7px,transparent .9px);
     background-size:5px 5px,11px 11px;background-color:#fff;
     -webkit-print-color-adjust:exact;print-color-adjust:exact}
-  .k-band span{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:bold;letter-spacing:4px;font-size:17px}
+  .k-band span{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:bold;letter-spacing:4px;font-size:calc(var(--doc-size,12.5px)*1.32)}
   .k-content{flex:1;padding:12px 14px 14px 18px}
   .kr{display:flex;align-items:flex-end;margin-bottom:13px}
   .kl{width:128px;flex-shrink:0;font-weight:bold;font-style:italic}
@@ -109,15 +115,15 @@
   .k-left{width:56%;padding:0 18px 2px 4px}
   .k-hr{border-top:1.2px solid #000}
   .k-amtrow{display:flex;align-items:center;justify-content:space-between;padding:15px 10px}
-  .k-amtrow .lbl{font-weight:bold;font-style:italic;font-size:14px}
+  .k-amtrow .lbl{font-weight:bold;font-style:italic;font-size:calc(var(--doc-size,12.5px)*1.1)}
   .skewbox{border:1.5px solid #000;transform:skewX(-14deg);min-width:220px;padding:8px 28px;text-align:center;background:#fdfdfd}
-  .skewbox span{display:inline-block;transform:skewX(14deg);font-size:19px;font-weight:bold;font-style:italic}
+  .skewbox span{display:inline-block;transform:skewX(14deg);font-size:calc(var(--doc-size,12.5px)*1.5);font-weight:bold;font-style:italic}
   .k-right{flex:1;display:flex;flex-direction:column;align-items:center}
   .k-datebox{display:inline-block;text-align:left;margin-top:2px}
   .k-date{display:block;font-weight:bold;font-style:italic;border-bottom:2px dotted #000;padding:0 4px 2px}
   .k-pt{display:block;padding-top:3px}
   .k-sigspace{height:40px}
-  .k-name{font-weight:bold;font-size:14.5px;border-bottom:1.5px solid #000;min-width:195px;
+  .k-name{font-weight:bold;font-size:calc(var(--doc-size,12.5px)*1.16);border-bottom:1.5px solid #000;min-width:195px;
           padding:0 12px 3px;letter-spacing:.5px;text-align:center}
   .kuitansi+.kuitansi{page-break-inside:avoid;margin-top:26px}
   /* ---------- PRINT ---------- */
@@ -170,12 +176,24 @@
     </div>
 
     <div class="card">
-      <h3><span class="num">3</span> Daftar Penerima <button class="mini" id="btnAdd">+ Tambah</button></h3>
+      <h3><span class="num">3</span> Pengaturan Font</h3>
+      <label>Jenis Huruf Dokumen</label>
+      <select data-bind="font.family" id="fontSel"></select>
+      <label>Ukuran Huruf Dasar</label>
+      <div class="size-row">
+        <input type="range" data-bind="font.size" min="10" max="15" step="0.5">
+        <span class="size-val" id="fontSizeVal">12.5 px</span>
+      </div>
+      <div class="font-preview" id="fontPreview">TANDA BUKTI PEMBAYARAN HONORARIUM — AaBbCc 123</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="num">4</span> Daftar Penerima <button class="mini" id="btnAdd">+ Tambah</button></h3>
       <div id="recList"></div>
     </div>
 
     <div class="card">
-      <h3><span class="num">4</span> Pejabat Penandatangan</h3>
+      <h3><span class="num">5</span> Pejabat Penandatangan</h3>
       <label>Keterangan kiri</label><input type="text" data-bind="pejabat.labelKiri">
       <label>Jabatan Kepala</label><input type="text" data-bind="pejabat.jabatanKepala">
       <label>Nama Kepala Sekolah</label><input type="text" data-bind="pejabat.namaKepala">
@@ -186,7 +204,7 @@
     </div>
 
     <div class="card">
-      <h3><span class="num">5</span> Kuitansi</h3>
+      <h3><span class="num">6</span> Kuitansi</h3>
       <label>Sudah Terima dari</label><input type="text" data-bind="kuitansi.terimaDari">
       <label>Untuk Pembayaran</label><textarea data-bind="kuitansi.pembayaran"></textarea>
       <div class="row2">
@@ -214,6 +232,7 @@ const DEFAULTS = {
        posel:'Pos-el : admin@gmail.com',logo:null},
   judul:{judul:'TANDA BUKTI PEMBAYARAN HONORARIUM',
          kategori:'TENAGA KEPENDIDIKAN (PETUGAS KEBERSIHAN)',tahun:'2026',bulan:'Februari'},
+  font:{family:'times',size:12.5},
   penerima:[{nama:'NAMA PETUGAS',tugas:'PETUGAS KEBERSIHAN',bulan:1,honor:700000}],
   pejabat:{labelKiri:'Setuju dibayarkan',jabatanKepala:'Ka UPT SD NEGERI 06XXXX',
            namaKepala:'NAMA KEPSEK',nipKepala:'NIP.XXXXXXXX XXXXXX X XXX',
@@ -228,6 +247,8 @@ try{
   const saved = localStorage.getItem('honorariumAppState');
   if(saved){ state = Object.assign(JSON.parse(JSON.stringify(DEFAULTS)), JSON.parse(saved)); }
 }catch(e){}
+/* migrasi data lama yang belum punya pengaturan font */
+if(!state.font)state.font={family:'times',size:12.5};
 
 let saveTimer=null;
 function save(){ clearTimeout(saveTimer); saveTimer=setTimeout(()=>{ try{localStorage.setItem('honorariumAppState',JSON.stringify(state));}catch(e){} },250); }
@@ -254,6 +275,31 @@ function terbilang(n){
   return s.replace(/\s+/g,' ').trim()||'Nol';
 }
 const rpCell=n=>`<div class="rp"><span>Rp</span><span>${fmt(n)}</span></div>`;
+
+/* ================= FONT ================= */
+const FONTS={
+  times:{label:'Times New Roman (baku resmi)',stack:"'Times New Roman',Times,serif"},
+  cambria:{label:'Cambria',stack:"Cambria,Georgia,serif"},
+  georgia:{label:'Georgia',stack:"Georgia,serif"},
+  garamond:{label:'Garamond',stack:"Garamond,'EB Garamond',serif"},
+  bookman:{label:'Bookman Old Style',stack:"'Bookman Old Style','Book Antiqua',serif"},
+  arial:{label:'Arial',stack:"Arial,Helvetica,sans-serif"},
+  calibri:{label:'Calibri',stack:"Calibri,Carlito,sans-serif"},
+  tahoma:{label:'Tahoma',stack:"Tahoma,Geneva,sans-serif"},
+  verdana:{label:'Verdana',stack:"Verdana,Geneva,sans-serif"},
+  courier:{label:'Courier New (mesin tik)',stack:"'Courier New',Courier,monospace"}
+};
+function applyFont(){
+  const f=FONTS[state.font.family]||FONTS.times;
+  const sz=Math.min(15,Math.max(10,Number(state.font.size)||12.5));
+  const sh=document.getElementById('sheet');
+  sh.style.setProperty('--doc-font',f.stack);
+  sh.style.setProperty('--doc-size',sz+'px');
+  const pv=document.getElementById('fontPreview');
+  if(pv){pv.style.fontFamily=f.stack;pv.style.fontSize=(sz*1.15)+'px';}
+  const fv=document.getElementById('fontSizeVal');
+  if(fv)fv.textContent=(sz%1?sz.toFixed(1):sz)+' px';
+}
 
 /* ================= RENDER DOCUMENT ================= */
 function renderDoc(){
@@ -399,6 +445,7 @@ document.addEventListener('input',e=>{
   const el=e.target;
   if(el.dataset && el.dataset.bind){
     setPath(state,el.dataset.bind,el.value);
+    if(el.dataset.bind.indexOf('font.')===0){applyFont();}
     if(el.dataset.bind==='judul.kategori'||el.dataset.bind==='judul.bulan'||el.dataset.bind==='kop.sekolah'){
       autoFillKuitansi();
     }
@@ -438,7 +485,7 @@ document.addEventListener('click',e=>{
     if(confirm('Kembalikan semua isian ke contoh awal?')){
       state=JSON.parse(JSON.stringify(DEFAULTS));
       localStorage.removeItem('honorariumAppState');
-      syncBoundInputs();renderRecList();renderDoc();
+      syncBoundInputs();renderRecList();applyFont();renderDoc();
     }
   }
 });
@@ -474,11 +521,21 @@ document.getElementById('logoInput').addEventListener('change',e=>{
 });
 
 /* ================= INIT ================= */
+/* isi pilihan font ke dropdown */
+(function(){
+  const sel=document.getElementById('fontSel');
+  Object.keys(FONTS).forEach(k=>{
+    const o=document.createElement('option');
+    o.value=k;o.textContent=FONTS[k].label;o.style.fontFamily=FONTS[k].stack;
+    sel.appendChild(o);
+  });
+})();
 lastAutoPemb=state.kuitansi.pembayaran;
 lastAutoTerima=state.kuitansi.terimaDari;
 syncBoundInputs();
 renderRecList();
+applyFont();
 renderDoc();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3beddc45fd1f8d6',t:'MTc4OTU1MTE3MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3bf0c039b50fe11',t:'MTc4OTU1MzA2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
